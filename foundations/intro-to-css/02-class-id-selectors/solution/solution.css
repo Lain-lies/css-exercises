@@ -21,6 +21,7 @@
     the 'adjust-font-size' class above to help reduce
     duplicate code.
 */
+
 #four {
   background-color: hsl(120, 100%, 75%);
   font-weight: bold;
