@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html, body {
+  padding: 0;
+  margin : 0;
+  box-sizing: border-box;
   height: 100%;
 }
 
@@ -20,6 +23,11 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  /* flex-wrap: wrap; */
+  
 }
 
 .icon {
@@ -33,7 +41,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink:0;
 }
+
 
 .close-button {
   background: #eee;
@@ -48,7 +58,15 @@ body {
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
+  flex-shrink: 0;
 }
+
+.header{
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
 
 button {
   cursor: pointer;
@@ -66,4 +84,30 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+  
+}
+
+.content-container{
+
+  display : flex;
+  flex-direction: column;
+  gap: 2px;
+
+}
+
+/* DIVS INSIDE */
+
+.header-and-close-button-container{
+  
+  display:flex;
+  justify-content: space-between;
+
+}
+
+.response-buttons-container{
+
+  display: flex;
+  margin-top: 10px;
+  gap: 5px;
+
 }
