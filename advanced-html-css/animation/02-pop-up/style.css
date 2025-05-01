@@ -25,6 +25,28 @@ button {
   border-radius: 5px;
   font-weight: 600;
 }
+@keyframes slide-up {
+  from{
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+
+  }
+  to{
+    transform: translate(-50%, -250%);
+    opacity: 0%;
+ 
+  }
+}
+
+@keyframes slide-down {
+  from{
+    transform: translate(-50%, -250%);
+
+  }
+  to{
+    transform: translate(-50%, -50%);
+  }
+}
 
 .popup-modal {
   padding: 32px 64px;
@@ -37,7 +59,7 @@ button {
   transform-origin: center;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0%;
+  opacity: 0%;  
   text-align: center;
 }
 
@@ -56,8 +78,16 @@ button {
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  animation: slide-down 1000ms;
+}
+
+.popup-modal.hide {
+  pointer-events: none;
+  animation: slide-up 1000ms;
 }
 
 .backdrop.show {
   opacity: 30%;
 }
+
+

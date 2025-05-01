@@ -1,12 +1,22 @@
 const openButton = document.getElementById('trigger-modal');
 const closeButton = document.getElementById('close-modal');
+const modalDiv = document.querySelector('.popup-modal');
+const backdrop = document.querySelector('.backdrop');
 
-function toggleModal() {
-  const modalDiv = document.querySelector('.popup-modal');
-  const backdrop = document.querySelector('.backdrop');
-  modalDiv.classList.toggle('show');
-  backdrop.classList.toggle('show');
+function openModal() {
+
+  modalDiv.classList.add('show');
+  modalDiv.classList.remove('hide');
+  backdrop.classList.add('show');
+  
 }
 
-openButton.addEventListener('click', toggleModal);
-closeButton.addEventListener('click', toggleModal);
+function hideModal(){
+  modalDiv.classList.remove('show');
+  modalDiv.classList.add('hide');
+  backdrop.classList.remove('show');
+
+
+}
+openButton.addEventListener('click', openModal);
+closeButton.addEventListener('click', hideModal);
